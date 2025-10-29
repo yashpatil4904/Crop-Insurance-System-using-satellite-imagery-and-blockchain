@@ -18,7 +18,7 @@ The model uses a two-branch architecture:
 ## Dataset
 
 The dataset contains:
-- 2,500 or 5,000 samples across 4 crop types (Corn, Soybean, Winter Wheat, Cotton)
+- USA samples across 4 crop types (Corn, Soybean, Winter Wheat, Cotton)
 - AG images: RGB satellite imagery (224×224×3)
 - NDVI images: Vegetation index (224×224)
 - Daily weather: 183 days × 9 features (temperature, precipitation, etc.)
@@ -144,7 +144,7 @@ python test_model.py --model_path ./cropnet_models2/best_model.pth
 
 ## Model Performance
 
-### Current Results (5000-sample dataset):
+### Current Results :
 - **R² Score**: 0.9642 (96.42% accuracy)
 - **RMSE**: 0.1886
 - **MAE**: 0.1114
@@ -185,12 +185,12 @@ After training and testing, you'll find:
 ## Citation
 
 ```
-@misc{cropnet2023,
-  author = {Your Name},
+@misc{
+  author = {Yash Patil},
   title = {CropNet: Crop Yield Prediction Using Multi-Modal Deep Learning},
-  year = {2023},
+  year = {2026},
   publisher = {GitHub},
-  howpublished = {\url{https://github.com/yourusername/cropnet}}
+  howpublished = {\url{https://github.com/yashpatil4904/Crop-Insurance-System-using-satellite-imagery-and-blockchain.git}}
 }
 ```
 
