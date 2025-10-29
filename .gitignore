@@ -1,0 +1,119 @@
+# CropNet Project .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# PyTorch Models (large files)
+*.pth
+*.pt
+*.pkl
+*.h5
+models/
+cropnet_models/
+epoch_models/
+best_model.pth
+final_model.pth
+checkpoint_*.pth
+
+# Dataset (large files)
+cropnet_dataset/
+*.npy
+data/
+*.json
+!package.json
+!*.example.json
+!cropnet_record_example.json
+
+# Training outputs
+training_history.json
+detailed_training_history.json
+test_predictions.json
+*.log
+
+# Images and visualizations
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.svg
+!architecture_diagram.png
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+temp/
+tmp/
+
+# CUDA/PyTorch cache
+.cache/
+.pytorch/
+
+# Results and outputs
+results/
+outputs/
+predictions/
+plots/
+
+# Environment variables
+.env
+.env.local
+*.env
+
+# Installation scripts
+install_cuda_pytorch.bat
+install_cuda_pytorch.sh
+
+# Check scripts (optional - remove if you want to track)
+check_gpu.py
+check_gpus.py
+verify_and_train.py
+

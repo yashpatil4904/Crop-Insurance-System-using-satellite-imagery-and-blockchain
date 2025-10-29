@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "fips_code": "10003",
+    "county_name": "New Castle County, Delaware",
+    "state": "DE",
+    "year": "2022",
+    "crop_type": "Soybean"
+  },
+  "usda_yield": {
+    "value": 45.2,
+    "units": "bushels/acre",
+    "source": "USDA National Agricultural Statistics Service"
+  },
+  "sentinel2_images": {
+    "description": "224x224 pixel satellite images at 9km resolution, revisit every 14 days",
+    "image_types": {
+      "AG": {
+        "path": "data/10003/2022/Sentinel2_AG_20220115_10003.tif",
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "description": "Agriculture RGB imagery showing crop fields"
+      },
+      "NDVI": {
+        "path": "data/10003/2022/Sentinel2_NDVI_20220115_10003.tif",
+        "shape": [
+          224,
+          224
+        ],
+        "description": "Normalized Difference Vegetation Index (greenness measure)"
+      }
+    },
+    "temporal_coverage": "Growing season (April - October) with ~26 images per year"
+  },
+  "hrrr_weather": {
+    "description": "High-resolution weather forecast data at 9km resolution",
+    "temporal": {
+      "mercise": "Daily parameters for short-term weather effects",
+      "monthly": "Monthly aggregates for long-term climate patterns"
+    },
+    "parameters": {
+      "daily": [
+        {
+          "date": "2022-04-15",
+          "features": {
+            "temperature_max": 65.2,
+            "temperature_min": 42.1,
+            "precipitation": 0.3,
+            "humidity": 65.0,
+            "wind_speed": 8.4,
+            "solar_radiation": 450,
+            "cloud_cover": 30,
+            "soil_moisture": 0.42,
+            "soil_temperature": 52.1
+          }
+        }
+      ],
+      "monthly": {
+        "2022-04": {
+          "avg_temperature": 58.5,
+          "total_precipitation": 4.2,
+          "growing_degree_days": 245.0
+        }
+      }
+    },
+    "note": "9 weather parameters \u00c3\u2014 daily over growing season + monthly aggregations"
+  },
+  "ml_ready_format": {
+    "x": "Sentinel-2 images (AG + NDVI) - visual features",
+    "ys": "HRRR daily weather parameters - short-term effects",
+    "yl": "HRRR monthly weather parameters - climate patterns",
+    "z": "USDA yield - target variable",
+    "description": "Tuple: (x, ys, yl, z) for training deep learning models"
+  },
+  "data_modalities_summary": {
+    "textual": "USDA yield data (structured)",
+    "visual": "Sentinel-2 satellite images (224\u00c3\u2014224 RGB)",
+    "temporal": "HRRR weather time series (daily + monthly)"
+  }
+}
