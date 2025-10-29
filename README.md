@@ -185,12 +185,12 @@ After training and testing, you'll find:
 ## Citation
 
 ```
-@misc{
+@misc{cropnet2026,
   author = {Yash Patil},
   title = {CropNet: Crop Yield Prediction Using Multi-Modal Deep Learning},
   year = {2026},
   publisher = {GitHub},
-  howpublished = {\url{https://github.com/yashpatil4904/Crop-Insurance-System-using-satellite-imagery-and-blockchain.git}}
+  howpublished = {\url{https://github.com/yashpatil4904/Crop-Insurance-System-using-satellite-imagery-and-blockchain}}
 }
 ```
 
