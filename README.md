@@ -184,7 +184,9 @@ After training and testing, you'll find:
 
 ## Citation
 
-```
+If you use this work in your research, please cite:
+
+```bibtex
 @misc{cropnet2026,
   author = {Yash Patil},
   title = {CropNet: Crop Yield Prediction Using Multi-Modal Deep Learning},
@@ -193,4 +195,8 @@ After training and testing, you'll find:
   howpublished = {\url{https://github.com/yashpatil4904/Crop-Insurance-System-using-satellite-imagery-and-blockchain}}
 }
 ```
+
+**GitHub Repository:** [Crop-Insurance-System-using-satellite-imagery-and-blockchain](https://github.com/yashpatil4904/Crop-Insurance-System-using-satellite-imagery-and-blockchain)
+
+
 
