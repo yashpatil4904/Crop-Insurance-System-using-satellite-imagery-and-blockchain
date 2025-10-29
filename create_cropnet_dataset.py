@@ -28,26 +28,27 @@ print("="*70)
 print("CROPNET DATASET GENERATOR")
 print("="*70)
 print("\nDataset Configuration:")
-print(f"  - Total samples: 2500")
+print(f"  - Total samples: 5000")
 print(f"  - Crop types: {CROP_TYPES}")
 print(f"  - Years: {YEARS[0]}-{YEARS[-1]}")
 print(f"  - Image size: 224x224")
+print(f"  - Output directory: cropnet_dataset2")
 print("="*70)
 
 # Configuration
-N_SAMPLES = 2500
+N_SAMPLES = 5000
 IMG_SIZE = 224
-SAVE_DIR = Path("./cropnet_dataset")
+SAVE_DIR = Path("./cropnet_dataset2")
 
 # Clean up old dataset if exists
 if SAVE_DIR.exists():
     import shutil
     shutil.rmtree(SAVE_DIR)
-    print("[INFO] Removed old dataset")
+    print("[INFO] Removed old dataset2")
 
 SAVE_DIR.mkdir(exist_ok=True)
 
-print("\nGenerating 2500 realistic CropNet samples...")
+print("\nGenerating 5000 realistic CropNet samples...")
 print("This may take a few minutes...\n")
 
 # Initialize dataset structure
@@ -229,7 +230,7 @@ def get_yield_ground_truth(crop_type, weather_quality):
 
 # Main dataset generation loop
 sample_idx = 0
-samples_per_crop = N_SAMPLES // len(CROP_TYPES)
+samples_per_crop = N_SAMPLES // len(CROP_TYPES)  # 5000 / 4 = 1250 per crop
 
 for crop_type in CROP_TYPES:
     print(f"\nGenerating {samples_per_crop} samples for {crop_type}...")
@@ -300,6 +301,7 @@ print(f"\n[OK] Generated {len(dataset)} samples!")
 
 # Save metadata
 metadata_path = SAVE_DIR / "dataset_metadata.json"
+print(f"Saving metadata to {metadata_path}...")
 with open(metadata_path, 'w') as f:
     json.dump(dataset, f, indent=2)
 
